@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram xmlns="http://www.plantuml.com/plantuml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.plantuml.com/plantuml http://www.plantuml.com/plantuml/dtd/plantuml.xsd">
+  <title>Cricket UML Class Diagram</title>
+  <sequenceDiagram>
+    <class name="CricketMatch">
+      <attribute name="name" type="String"/>
+      <attribute name="teams" type="List&lt;Team&gt;"/>
+      <attribute name="players" type="List&lt;Player&gt;"/>
+    </class>
+    <class name="Team">
+      <attribute name="name" type="String"/>
+      <attribute name="players" type="List&lt;Player&gt;"/>
+    </class>
+    <class name="Player">
+      <attribute name="name" type="String"/>
+      <attribute name="position" type="String"/>
+      <attribute name="batting_average" type="double"/>
+      <attribute name="bowling_average" type="double"/>
+    </class>
+    <generalization>
+      <source>Player</source>
+      <target>Team</target>
+    </generalization>
+    <generalization>
+      <source>Team</source>
+      <target>CricketMatch</target>
+    </generalization>
+  </sequenceDiagram>
+</diagram>
